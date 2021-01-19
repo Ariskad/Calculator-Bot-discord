@@ -61,4 +61,4 @@ async def power(ctx,a:int, *,b:int):
     await ctx.send(a**b)
     
 
-client.run("(TOKEN)")
+client.run("TOKEN")
