@@ -21,9 +21,12 @@ ids = []
 
 @client.event
 async def on_ready():
-    print("MathBot is running")
+    print("MathBot is running")await client.change_presence(activity=discord.Game(',help'))
+    
+    print('Connected to bot: {}'.format(client.user.name))
+    print('Bot ID: {}'.format(client.user.id))
 
-@client.command()
+    @client.command()
 async def add(ctx,a:int, *,b:int): 
     """ Προσθέτει το πρώτο αριθμό με τον δεύτερο(a+b)(P.e.  2 2=4)"""
     await ctx.send(a+b)
