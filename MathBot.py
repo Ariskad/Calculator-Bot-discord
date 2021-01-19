@@ -24,27 +24,27 @@ async def on_ready():
     print("MathBot is running")
 
 @client.command()
-async def add(ctx,a:int,message,b:int): 
+async def add(ctx,a:int, *,b:int): 
     """ Προσθέτει το πρώτο αριθμό με τον δεύτερο(a+b)(P.e.  2 2=4)"""
     await ctx.send(a+b)
 
     
 
 @client.command() 
-async def sub(ctx,a:int,message,b:int): 
+async def sub(ctx,a:int, *,b:int): 
     """Αφαιρεί το πρώτο αριθμό με τον δεύτερο(a-b)(P.e  2 2=4)"""
     await ctx.send(a-b)
     
     
 
 @client.command() 
-async def multiply(ctx,a:int,message,b:int): 
+async def multiply(ctx,a:int, *,b:int): 
     """Πολλαπλασιάζει το πρώτο αριθμό με τον δεύτερο(a*b)(P.e  2 2=4)"""
     await ctx.send(a*b)
     
 
 @client.command() 
-async def divide(ctx,a:int,message,b:int): 
+async def divide(ctx,a:int, *,b:int): 
     """Διαιρεί το πρώτο αριθμό με τον δεύτερο(a/b)(P.e  2 2=1)"""
     if b == 0:
         await ctx.send("False")
@@ -53,7 +53,7 @@ async def divide(ctx,a:int,message,b:int):
     
 
 @client.command()
-async def power(ctx,a:int,message,b:int):
+async def power(ctx,a:int, *,b:int):
     """Παίρνει τον πρώτο αριθμό και τον υψώνει στον αριθμό του δεύτερου(a^b)(P.e  2 2=4)"""
     await ctx.send(a**b)
     
